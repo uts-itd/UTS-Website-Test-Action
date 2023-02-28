@@ -25,8 +25,8 @@ driver = webdriver.Chrome(service=s, options=options)
 # navigate to eoi webpage
 driver.get('https://project-cad-sandpit.sandpit.itu.uts.edu.au/cad/eoi')
 
-try:
+#try:
 
 
-finally:
-    driver.quit()
+#finally:
+    #driver.quit()
