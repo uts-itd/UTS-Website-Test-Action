@@ -13,5 +13,8 @@ jobs:
         with:
           python-version: '3.9'
 
+      - name: Install Selenium
+        run: pip install selenium
+
       - name: Running the Python script
         run: python3 Selenium_Firefox_Website_Test.py
