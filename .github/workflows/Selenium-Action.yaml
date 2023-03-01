@@ -16,5 +16,5 @@ jobs:
       - name: Install Selenium
         run: pip install selenium
 
-      - name: Running the Python script
+      - name: Running the Python file
         run: python3 Selenium_Firefox_Website_Test.py
