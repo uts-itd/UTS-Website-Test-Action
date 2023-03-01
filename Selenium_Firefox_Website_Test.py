@@ -11,7 +11,7 @@ from selenium import webdriver
 s = Service('/usr/local/bin/geckodriver')
 options = webdriver.FirefoxOptions()
 options = Options()
-options.add_argument("--headless")
+#options.add_argument("--headless")
 options.add_argument("--private")
 options.add_argument("--window-size=1920,1080")
 
