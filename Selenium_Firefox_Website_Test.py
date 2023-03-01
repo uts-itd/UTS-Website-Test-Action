@@ -20,15 +20,4 @@ driver = webdriver.Firefox(service=s, options=options)
 
 driver.get('https://www.uts.edu.au/')
 
-
-try:
-    next_button = driver.find_element(By.ID, "node/4087").click()
-
-finally:
-    driver.quit()
-
-
-
-
-
-    #Help me
+driver.quit()
