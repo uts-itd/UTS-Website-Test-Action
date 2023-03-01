@@ -14,4 +14,4 @@ jobs:
           python-version: '3.9'
 
       - name: Running the Python script
-        run: Selenium_Firefox_Website_Test.py
+        run: python3 Selenium_Firefox_Website_Test.py
