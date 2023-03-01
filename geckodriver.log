@@ -37,3 +37,276 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 DevTools listening on ws://127.0.0.1:35807/devtools/browser/432c4626-8fad-4aed-9553-5c3d616694bd
 console.error: ({})
 1677629588770	Marionette	INFO	Stopped listening on port 43985
+1677629959969	geckodriver	INFO	Listening on 127.0.0.1:44613
+1677629959992	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--private" "--remote-debugging-port" "44679" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileaHQGrC"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677629960351	Marionette	INFO	Marionette enabled
+1677629960353	Marionette	INFO	Listening on port 32941
+Read port: 32941
+WebDriver BiDi listening on ws://127.0.0.1:44679
+1677629960464	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileaHQGrC/search.json.mozlz4", (void 0)))
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+DevTools listening on ws://127.0.0.1:44679/devtools/browser/eaefef6c-99c8-4751-8ca7-abbc498f9283
+console.error: ({})
+1677629975633	geckodriver	INFO	Listening on 127.0.0.1:45863
+1677629975652	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--private" "--window-size=1920,1080" "--remote-debugging-port" "44573" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile8kTA4a"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677629976004	Marionette	INFO	Marionette enabled
+1677629976006	Marionette	INFO	Listening on port 46263
+console.error: "Warning: unrecognized command line flag -window-size\n"
+Read port: 46263
+WebDriver BiDi listening on ws://127.0.0.1:44573
+1677629976107	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile8kTA4a/search.json.mozlz4", (void 0)))
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+DevTools listening on ws://127.0.0.1:44573/devtools/browser/a4fd0ebc-11fd-4ec8-a8b1-be8180248da1
+console.error: ({})
+1677629983382	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1677629988771	Marionette	INFO	Stopped listening on port 32941
+1677629992669	Marionette	INFO	Stopped listening on port 46263
+1677630010979	geckodriver	INFO	Listening on 127.0.0.1:39657
+1677630010997	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--private" "--window-size=1000,1080" "--remote-debugging-port" "59045" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileSLVs9U"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677630011356	Marionette	INFO	Marionette enabled
+1677630011358	Marionette	INFO	Listening on port 38689
+console.error: "Warning: unrecognized command line flag -window-size\n"
+Read port: 38689
+WebDriver BiDi listening on ws://127.0.0.1:59045
+1677630011468	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileSLVs9U/search.json.mozlz4", (void 0)))
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+DevTools listening on ws://127.0.0.1:59045/devtools/browser/b438ff00-63bf-4d2f-99e8-cfd4d89ae07d
+console.error: ({})
+1677630026751	geckodriver	INFO	Listening on 127.0.0.1:51617
+1677630026769	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--private" "--window-size=500,1080" "--remote-debugging-port" "34251" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileJgSGDD"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677630027146	Marionette	INFO	Marionette enabled
+1677630027148	Marionette	INFO	Listening on port 44135
+console.error: "Warning: unrecognized command line flag -window-size\n"
+Read port: 44135
+WebDriver BiDi listening on ws://127.0.0.1:34251
+1677630027256	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileJgSGDD/search.json.mozlz4", (void 0)))
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+DevTools listening on ws://127.0.0.1:34251/devtools/browser/a0aebdd7-ce04-4d06-a430-af713823949d
+console.error: ({})
+1677630033945	Marionette	INFO	Stopped listening on port 44135
+1677630040620	Marionette	INFO	Stopped listening on port 38689
+1677630126467	geckodriver	INFO	Listening on 127.0.0.1:46583
+1677630126485	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--private" "--window-size=1920,1080" "--remote-debugging-port" "36617" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileiLSUrw"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677630126844	Marionette	INFO	Marionette enabled
+1677630126846	Marionette	INFO	Listening on port 46527
+console.error: "Warning: unrecognized command line flag -window-size\n"
+Read port: 46527
+WebDriver BiDi listening on ws://127.0.0.1:36617
+1677630127285	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileiLSUrw/search.json.mozlz4", (void 0)))
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+DevTools listening on ws://127.0.0.1:36617/devtools/browser/be214008-57e3-4875-8bd5-150b23759828
+console.error: ({})
+1677630132020	Marionette	INFO	Stopped listening on port 46527
+1677630207296	geckodriver	INFO	Listening on 127.0.0.1:48129
+1677630207315	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--private" "--window-size=1920,1080" "--remote-debugging-port" "37921" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileZdefuU"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677630207670	Marionette	INFO	Marionette enabled
+1677630207672	Marionette	INFO	Listening on port 42375
+console.error: "Warning: unrecognized command line flag -window-size\n"
+Read port: 42375
+WebDriver BiDi listening on ws://127.0.0.1:37921
+1677630207777	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileZdefuU/search.json.mozlz4", (void 0)))
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+DevTools listening on ws://127.0.0.1:37921/devtools/browser/4c5ba743-9fae-446a-a104-684677737059
+console.error: ({})
+1677630212327	Marionette	INFO	Stopped listening on port 42375
+1677630956088	geckodriver	INFO	Listening on 127.0.0.1:41651
+1677630956108	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--private" "--window-size=1920,1080" "--remote-debugging-port" "47193" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileGQb7aa"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677630956462	Marionette	INFO	Marionette enabled
+1677630956464	Marionette	INFO	Listening on port 45463
+console.error: "Warning: unrecognized command line flag -window-size\n"
+Read port: 45463
+WebDriver BiDi listening on ws://127.0.0.1:47193
+1677630956558	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileGQb7aa/search.json.mozlz4", (void 0)))
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+DevTools listening on ws://127.0.0.1:47193/devtools/browser/3e7815e8-b376-4a58-920c-350836e39b16
+console.error: ({})
+1677630966380	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+console.error: ({})
+1677630967264	Marionette	INFO	Stopped listening on port 45463
+1677630976882	geckodriver	INFO	Listening on 127.0.0.1:54363
+1677630976903	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--private" "--window-size=1920,1080" "--remote-debugging-port" "37473" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileoQ7i47"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677630977302	Marionette	INFO	Marionette enabled
+1677630977304	Marionette	INFO	Listening on port 40515
+console.error: "Warning: unrecognized command line flag -window-size\n"
+WebDriver BiDi listening on ws://127.0.0.1:37473
+Read port: 40515
+1677630977509	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileoQ7i47/search.json.mozlz4", (void 0)))
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+DevTools listening on ws://127.0.0.1:37473/devtools/browser/5c5b9eee-e504-4c7e-b03a-a7524b0bedb3
+console.error: ({})
+1677630986966	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1677630986966	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1677630986967	Marionette	INFO	Stopped listening on port 40515
+1677631049428	geckodriver	INFO	Listening on 127.0.0.1:43283
+1677631049446	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--private" "--window-size=1920,1080" "--remote-debugging-port" "40059" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilegcUEG0"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677631049800	Marionette	INFO	Marionette enabled
+1677631049802	Marionette	INFO	Listening on port 35667
+console.error: "Warning: unrecognized command line flag -window-size\n"
+Read port: 35667
+WebDriver BiDi listening on ws://127.0.0.1:40059
+1677631049925	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilegcUEG0/search.json.mozlz4", (void 0)))
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+DevTools listening on ws://127.0.0.1:40059/devtools/browser/17dc7d64-7dfe-4ac0-9ee2-170d8b3e7137
+console.error: ({})
+console.error: ({})
+console.error: ({})
+1677631106444	Marionette	INFO	Stopped listening on port 35667
+JavaScript error: resource://gre/modules/CrashManager.jsm, line 904: AbortError: IOUtils: Shutting down and refusing additional I/O tasks
+1677631108309	geckodriver	INFO	Listening on 127.0.0.1:49317
+1677631108328	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--private" "--window-size=1920,1080" "--remote-debugging-port" "42353" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileKkc5cS"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677631108683	Marionette	INFO	Marionette enabled
+1677631108685	Marionette	INFO	Listening on port 41317
+console.error: "Warning: unrecognized command line flag -window-size\n"
+Read port: 41317
+WebDriver BiDi listening on ws://127.0.0.1:42353
+1677631108782	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileKkc5cS/search.json.mozlz4", (void 0)))
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+DevTools listening on ws://127.0.0.1:42353/devtools/browser/82260bc2-93b5-4d47-8e5a-7f8581634064
+console.error: ({})
+1677631116112	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1677631344331	Marionette	INFO	Stopped listening on port 41317
+1677631345988	geckodriver	INFO	Listening on 127.0.0.1:35435
+1677631346007	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--private" "--window-size=1920,1080" "--remote-debugging-port" "43257" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileymOSG4"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677631346376	Marionette	INFO	Marionette enabled
+1677631346379	Marionette	INFO	Listening on port 37327
+console.error: "Warning: unrecognized command line flag -window-size\n"
+Read port: 37327
+WebDriver BiDi listening on ws://127.0.0.1:43257
+1677631346495	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileymOSG4/search.json.mozlz4", (void 0)))
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+DevTools listening on ws://127.0.0.1:43257/devtools/browser/06d72190-8435-4275-a14b-60124ce7c0b9
+console.error: ({})
+1677631353373	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1677631353374	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1677631353375	Marionette	INFO	Stopped listening on port 37327
+1677631579739	geckodriver	INFO	Listening on 127.0.0.1:39321
+1677631579757	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--private" "--window-size=1920,1080" "--remote-debugging-port" "38307" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilevW86pJ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677631580134	Marionette	INFO	Marionette enabled
+1677631580137	Marionette	INFO	Listening on port 44673
+Read port: 44673
+console.error: "Warning: unrecognized command line flag -window-size\n"
+WebDriver BiDi listening on ws://127.0.0.1:38307
+1677631580264	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilevW86pJ/search.json.mozlz4", (void 0)))
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+DevTools listening on ws://127.0.0.1:38307/devtools/browser/00d38f88-ae0c-4b62-9b2a-155535cc979f
+console.error: ({})
+1677631592249	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1677631592250	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1677631592287	Marionette	INFO	Stopped listening on port 44673
+1677631990895	geckodriver	INFO	Listening on 127.0.0.1:41305
+1677631990914	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--private" "--window-size=1920,1080" "--remote-debugging-port" "32847" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile3EqcEd"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677631991328	Marionette	INFO	Marionette enabled
+1677631991331	Marionette	INFO	Listening on port 44377
+console.error: "Warning: unrecognized command line flag -window-size\n"
+Read port: 44377
+WebDriver BiDi listening on ws://127.0.0.1:32847
+1677631991469	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile3EqcEd/search.json.mozlz4", (void 0)))
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+DevTools listening on ws://127.0.0.1:32847/devtools/browser/3c1069ab-4ff6-4e0c-b255-0463556a1c2f
+console.error: ({})
+1677632000563	Marionette	INFO	Stopped listening on port 44377
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 693: TypeError: this.tablesData[table] is undefined
