@@ -13,7 +13,7 @@ options = webdriver.FirefoxOptions()
 options = Options()
 #options.add_argument("--headless")
 options.add_argument("--private")
-options.add_argument("--window-size=1920,1080")
+options.add_argument("--window-size=1000,1080")
 
 
 
@@ -22,3 +22,5 @@ driver = webdriver.Firefox(service=s, options=options)
 driver.get('https://www.uts.edu.au/')
 
 driver.quit()
+
+print ("This is my swamp")
