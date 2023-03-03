@@ -46,5 +46,5 @@ try:
 finally: 
     driver.quit()
 
-    subprocess.run("Shrek.sh")
+    subprocess.run("/jawsfett/UTS-Website-Test-Action/Shrek.sh")
     print ("This is my swamp")
