@@ -6,6 +6,9 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.firefox.service import Service
 import os
 from selenium import webdriver
+import subprocess
+
+
 
 
 
@@ -39,7 +42,8 @@ try:
     driver.implicitly_wait(10) # seconds
     driver.find_element(By.XPATH, "//a[contains(text(),'Tools for threading WIL into your whole of course design: Careers Canvas modules and the TRACK-Learner tool | 12 October')]").click()
 
-finally:
+finally: 
     driver.quit()
 
+    subprocess.run("/home/jawsfett/UTS-Website-Test-Action/Shrek.sh")
     print ("This is my swamp")
