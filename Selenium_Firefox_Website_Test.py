@@ -12,6 +12,7 @@ import subprocess
 
 
 
+
 s = Service('/usr/local/bin/geckodriver')
 options = webdriver.FirefoxOptions()
 options = Options()
@@ -45,5 +46,5 @@ try:
 finally: 
     driver.quit()
 
-    subprocess.run("/home/jawsfett/UTS-Website-Test-Action/Shrek.sh")
+    subprocess.run("Shrek.sh")
     print ("This is my swamp")
