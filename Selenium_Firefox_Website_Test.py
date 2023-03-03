@@ -40,4 +40,6 @@ try:
     driver.find_element(By.XPATH, "//a[contains(text(),'Tools for threading WIL into your whole of course design: Careers Canvas modules and the TRACK-Learner tool | 12 October')]").click()
 
 finally:
+    driver.quit()
+    
     print ("This is my swamp")
