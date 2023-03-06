@@ -20,6 +20,8 @@ jobs:
 
       - name: RUN THE GRID!!!
         run: java -jar selenium-server-4.8.1.jar hub
+      
+      - name: RUN THE GRID THE SEQUEL!!!
         run: java -jar selenium-server-4.8.1.jar node
 
       #- name: Running the Python file
