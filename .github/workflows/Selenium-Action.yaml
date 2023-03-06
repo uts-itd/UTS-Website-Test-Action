@@ -18,13 +18,13 @@ jobs:
       - name: Install Selenium
         run: pip install selenium
 
-      - name: RUN THE GRID!!!
-        run: java -jar selenium-server-4.8.1.jar hub
+      #- name: RUN THE GRID!!!
+       # run: java -jar selenium-server-4.8.1.jar hub
       
-      - name: RUN THE GRID THE SEQUEL!!!
-        run: java -jar selenium-server-4.8.1.jar node
+      #- name: RUN THE GRID THE SEQUEL!!!
+        #run: java -jar selenium-server-4.8.1.jar node
 
-      #- name: Running the Python file
+      - name: Running the Python file
         #run: python3 Selenium_Firefox_Website_Test.py
 
       - name: This is my Swamp
