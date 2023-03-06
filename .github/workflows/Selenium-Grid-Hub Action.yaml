@@ -1,5 +1,5 @@
 
-name: Run Selenium On GitHub Action
+name: Run Selenium Grid Hub On GitHub Action
 on:
   push:
     branches:
