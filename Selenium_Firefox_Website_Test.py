@@ -3,25 +3,30 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.firefox.service import Service
+#from selenium.webdriver.firefox.service import Service
+#from selenium.webdriver.chrome.options import Options
+#from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import os
 from selenium import webdriver
 import subprocess
 
 
 
-
-
-
-s = Service('/usr/local/bin/geckodriver')
-options = webdriver.FirefoxOptions()
+#s = Service('/usr/local/bin/geckodriver')
+#options = webdriver.FirefoxOptions()
 options = Options()
 options.add_argument("--headless")
 options.add_argument("--window-size=1920,1080")
 
+driver = webdriver.Remote( 
+command_executor="http://192.168.0.229:4444",
+options=options
 
+#options = webdriver.ChromeOptions()
+)
 
-driver = webdriver.Firefox(service=s, options=options)
+#driver = webdriver.Firefox(options=options)
 
 driver.get('https://lx.uts.edu.au/')
 
