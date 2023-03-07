@@ -2,13 +2,14 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.edge.options import Options
 #from selenium.webdriver.firefox.options import Options
 #from selenium.webdriver.firefox.service import Service
-from selenium.webdriver.chrome.options import Options
+#from selenium.webdriver.chrome.options import Options
 #from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import os
-#from selenium import webdriver
+from selenium import webdriver
 #import subprocess
 
 
@@ -18,7 +19,6 @@ import os
 options = Options()
 options.add_argument("--headless")
 options.add_argument("--window-size=1920,1080")
-options.add_argument("--incognito")
 
 driver = webdriver.Remote( 
 command_executor="http://138.25.33.132:4444",

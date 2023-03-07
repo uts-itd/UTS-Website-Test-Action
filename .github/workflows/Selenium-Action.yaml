@@ -28,4 +28,4 @@ jobs:
         run: python3 Selenium_Firefox_Website_Test.py
 
       - name: This is my Swamp
-        run: ./Shrek.sh
+        run: ./TeamRocket.sh
