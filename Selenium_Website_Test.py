@@ -12,41 +12,46 @@ import os
 #from selenium import webdriver
 #import subprocess
 
-
+# define ze options
 fireFox_options = webdriver.FirefoxOptions()
 chrome_options = webdriver.ChromeOptions()
 edge_options = webdriver.EdgeOptions()
 options = Options()
 
+# see no evil
 fireFox_options.add_argument("--headless")
 chrome_options.add_argument("--headless")
 edge_options.add_argument("--headless")
 
-fireFox_options.add_argument("--width=1920")
-fireFox_options.add_argument("--height=1080")
+# manipulating the dimensions of space..... but not time
+fireFox_options.add_argument("--width=1920") # Firefox is not chromium!!! 
+fireFox_options.add_argument("--height=1080") # Firefox is not chromium!!! 
 chrome_options.add_argument("--window-size=1920,1080")
 edge_options.add_argument("--window-size=1920,1080")
 
-
+# Point me in the right direction baby!
 driverFirefox = webdriver.Remote( 
 command_executor="http://192.168.0.2:4444",
 options=fireFox_options
 )
 
+# Point me in the right direction baby The sequel!
 driverChrome = webdriver.Remote( 
 command_executor="http://192.168.0.2:4444",
 options=chrome_options
 )
 
+# Point me in the right direction baby The Threequel! 
 driverEdge = webdriver.Remote( 
 command_executor="http://192.168.0.2:4444",
 options=edge_options
 )
 
-driverFirefox.get('https://lx.uts.edu.au/')
-driverChrome.get('https://lx.uts.edu.au/')
-driverEdge.get('https://lx.uts.edu.au/')
+driverFirefox.get('https://lx.uts.edu.au/') #Fire up the Firefox Cannon!
+driverChrome.get('https://lx.uts.edu.au/')  #Fire up the Chrome Cannon!
+driverEdge.get('https://lx.uts.edu.au/')    #Fire up the Edge Cannon!
 
+# Run deez tests!
 def webtest(driver):
         driver.find_element(By.XPATH, "//a[contains(text(),'LX Resources')]").click()
         driver.find_element(By.XPATH, "//a[contains(text(),'Inclusive and accessible practices')]").click()
@@ -61,9 +66,9 @@ def webtest(driver):
         driver.find_element(By.ID, "s").click()
         driver.find_element(By.ID, "s").send_keys('careers')
         driver.find_element(By.CSS_SELECTOR, ".search-form").submit()
-        driver.implicitly_wait(10) # seconds
+        driver.implicitly_wait(10) # If it takes 10 seconds to hit the ground, how high is the building?
         driver.find_element(By.XPATH, "//a[contains(text(),'Tools for threading WIL into your whole of course design: Careers Canvas modules and the TRACK-Learner tool | 12 October')]").click()
-        driver.quit()
+        driver.quit() #KILL IT! (WITH FIRE)
 webtest(driverFirefox)
 webtest(driverChrome)
 webtest(driverEdge)
