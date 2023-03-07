@@ -28,4 +28,4 @@ jobs:
         run: ./TeamRocket.sh
 
       - name: The Legend Never Dies
-        run: ./TeamRocket copy.sh
+        run: ./TeamRocketCopy.sh
