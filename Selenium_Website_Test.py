@@ -17,33 +17,35 @@ fireFox_options = webdriver.FirefoxOptions()
 chrome_options = webdriver.ChromeOptions()
 edge_options = webdriver.EdgeOptions()
 options = Options()
-#fireFox_options.add_argument("--headless")
-#chrome_options.add_argument("--headless")
-chrome_options.add_argument("--window-size=1920,1080")
+
+fireFox_options.add_argument("--headless")
+chrome_options.add_argument("--headless")
+edge_options.add_argument("--headless")
+
 fireFox_options.add_argument("--width=1920")
 fireFox_options.add_argument("--height=1080")
+chrome_options.add_argument("--window-size=1920,1080")
 edge_options.add_argument("--window-size=1920,1080")
-#edge_options.add_argument("--headless")
-#options.add_argument("--incognito")
 
-driver1 = webdriver.Remote( 
+
+driverFirefox = webdriver.Remote( 
 command_executor="http://192.168.0.2:4444",
 options=fireFox_options
 )
 
-driver2 = webdriver.Remote( 
+driverChrome = webdriver.Remote( 
 command_executor="http://192.168.0.2:4444",
 options=chrome_options
 )
 
-driver3 = webdriver.Remote( 
+driverEdge = webdriver.Remote( 
 command_executor="http://192.168.0.2:4444",
 options=edge_options
 )
 
-driver1.get('https://lx.uts.edu.au/')
-driver2.get('https://lx.uts.edu.au/')
-driver3.get('https://lx.uts.edu.au/')
+driverFirefox.get('https://lx.uts.edu.au/')
+driverChrome.get('https://lx.uts.edu.au/')
+driverEdge.get('https://lx.uts.edu.au/')
 
 def webtest(driver):
         driver.find_element(By.XPATH, "//a[contains(text(),'LX Resources')]").click()
@@ -62,6 +64,6 @@ def webtest(driver):
         driver.implicitly_wait(10) # seconds
         driver.find_element(By.XPATH, "//a[contains(text(),'Tools for threading WIL into your whole of course design: Careers Canvas modules and the TRACK-Learner tool | 12 October')]").click()
         driver.quit()
-webtest(driver1)
-webtest(driver2)
-webtest(driver3)
+webtest(driverFirefox)
+webtest(driverChrome)
+webtest(driverEdge)

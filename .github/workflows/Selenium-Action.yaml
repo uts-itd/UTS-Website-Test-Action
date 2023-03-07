@@ -21,8 +21,11 @@ jobs:
       #- name: RUN THE GRID!!!
         #run: java -jar selenium-server-4.8.1.jar standalone
 
-      - name: Running the Python file
-        run: python3 Selenium_Website_Test.py
+      #- name: Running the Python file
+        #run: python3 Selenium_Website_Test.py
 
       - name: TEAM ROCKET!!!!
         run: ./TeamRocket.sh
+
+      - name: The Legend Never Dies
+        run: ./TheLegendNeverDies.sh
