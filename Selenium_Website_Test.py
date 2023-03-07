@@ -17,24 +17,27 @@ fireFox_options = webdriver.FirefoxOptions()
 chrome_options = webdriver.ChromeOptions()
 edge_options = webdriver.EdgeOptions()
 options = Options()
-fireFox_options.add_argument("--headless")
+#fireFox_options.add_argument("--headless")
 #chrome_options.add_argument("--headless")
 chrome_options.add_argument("--window-size=1920,1080")
-edge_options.add_argument("--headless")
+fireFox_options.add_argument("--width=1920")
+fireFox_options.add_argument("--height=1080")
+edge_options.add_argument("--window-size=1920,1080")
+#edge_options.add_argument("--headless")
 #options.add_argument("--incognito")
 
 driver1 = webdriver.Remote( 
-command_executor="http://192.168.0.229:4444",
+command_executor="http://192.168.0.2:4444",
 options=fireFox_options
 )
 
 driver2 = webdriver.Remote( 
-command_executor="http://192.168.0.229:4444",
+command_executor="http://192.168.0.2:4444",
 options=chrome_options
 )
 
 driver3 = webdriver.Remote( 
-command_executor="http://192.168.0.229:4444",
+command_executor="http://192.168.0.2:4444",
 options=edge_options
 )
 
