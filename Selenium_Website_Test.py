@@ -19,7 +19,7 @@ edge_options = webdriver.EdgeOptions()
 options = Options()
 
 # see no evil
-fireFox_options.add_argument("--headless")
+fireFox_options.add_argument("--headless") # watch your head!
 chrome_options.add_argument("--headless")
 edge_options.add_argument("--headless")
 
@@ -47,7 +47,7 @@ command_executor="http://192.168.0.2:4444",
 options=edge_options
 )
 
-driverFirefox.get('https://lx.uts.edu.au/') #Fire up the Firefox Cannon!
+driverFirefox.get('https://lx.uts.edu.au/') #Fire up the Fox Cannon!
 driverChrome.get('https://lx.uts.edu.au/')  #Fire up the Chrome Cannon!
 driverEdge.get('https://lx.uts.edu.au/')    #Fire up the Edge Cannon!
 
