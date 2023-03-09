@@ -37,7 +37,7 @@ jobs:
        # run: java -jar selenium-server-4.8.1.jar standalone -d
 
       - name: Running the Python file
-      run: |
+        run: |
         netstat -planet | grep 4444
         netstat -planet
         python3  Selenium_Website_Test.py
