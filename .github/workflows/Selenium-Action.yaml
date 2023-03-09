@@ -28,7 +28,7 @@ jobs:
         run: docker-compose -f docker-compose.yaml up -d
 
       - name: Wait for grid
-        run: wait-for-grid.sh
+        run: ./wait-for-grid.sh
 
       #- name: Tell the fire wall to let me in
       #  run: sudo ufw allow from 127.0.0.1 to any port 80
