@@ -31,19 +31,19 @@ edge_options.add_argument("--window-size=1920,1080")
 
 # Point me in the right direction baby!
 driverFirefox = webdriver.Remote( 
-command_executor="http://192.168.0.2:4444",
+command_executor="http://localhost:4444",
 options=fireFox_options
 )
 
 # Point me in the right direction baby The sequel!
 driverChrome = webdriver.Remote( 
-command_executor="http://192.168.0.2:4444",
+command_executor="http://localhost:4444",
 options=chrome_options
 )
 
 # Point me in the right direction baby The Threequel! 
 driverEdge = webdriver.Remote( 
-command_executor="http://192.168.0.2:4444",
+command_executor="http://localhost:4444",
 options=edge_options
 )
 
