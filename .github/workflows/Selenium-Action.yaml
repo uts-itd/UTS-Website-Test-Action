@@ -38,9 +38,9 @@ jobs:
 
       - name: Running the Python file
         run: |
-        netstat -planet | grep 4444
-        netstat -planet
-        python3  Selenium_Website_Test.py
+          netstat -planet | grep 4444
+          netstat -planet
+          python3  Selenium_Website_Test.py
 
       - name: KILL THE GRID!!!!
         run: docker-compose -f docker-compose.yaml down
