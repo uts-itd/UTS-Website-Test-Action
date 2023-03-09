@@ -25,10 +25,10 @@ jobs:
         run: docker-compose -f docker-compose.yaml up -d
 
       - name: Tell the fire wall to let me in
-        run: sudo ufw allow from 127.0.0.1 to any port 4444
+        run: sudo ufw allow from 127.0.0.1 to any port 80
 
-      - name: Deny incoming
-        run: sudo ufw default deny incoming
+      #- name: Deny incoming
+       # run: sudo ufw default deny incoming
 
       #- name: Allow outgoing
        # run: sudo ufw default allow outgoing
