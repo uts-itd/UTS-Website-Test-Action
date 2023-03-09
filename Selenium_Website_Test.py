@@ -19,9 +19,9 @@ edge_options = webdriver.EdgeOptions()
 options = Options()
 
 # see no evil
-#fireFox_options.add_argument("--headless") # watch your head!
-#chrome_options.add_argument("--headless")
-#edge_options.add_argument("--headless")
+fireFox_options.add_argument("--headless") # watch your head!
+chrome_options.add_argument("--headless")
+edge_options.add_argument("--headless")
 
 # manipulating the dimensions of space..... but not time
 fireFox_options.add_argument("--width=1920") # Firefox is not chromium!!! 
