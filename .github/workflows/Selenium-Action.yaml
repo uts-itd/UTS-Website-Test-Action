@@ -18,8 +18,11 @@ jobs:
       - name: Install Selenium
         run: pip install selenium
 
-      - name: FIRE UP THE GRID CANNON!!!
-        run: docker-compose -f docker-compose.yaml up -d
+      #- name: FIRE UP THE GRID CANNON!!!
+      #  run: docker-compose -f docker-compose.yaml up -d
+
+      - name: run grid server
+        run: java -jar selenium-server-4.8.1 standalone -d
 
       - name: Wait for grid
         run: ./wait-for-grid.sh
