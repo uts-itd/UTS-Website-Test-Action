@@ -22,7 +22,7 @@ jobs:
       #  run: docker-compose -f docker-compose.yaml up -d
 
       - name: run grid server
-        run: java -jar selenium-server-4.8.1 standalone -d
+        run: java -jar selenium-server-4.8.1.jar standalone -d
 
       - name: Wait for grid
         run: ./wait-for-grid.sh
