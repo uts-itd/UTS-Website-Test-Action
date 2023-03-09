@@ -24,8 +24,8 @@ jobs:
       - name: FIRE UP THE GRID CANNON!!!
         run: docker-compose -f docker-compose.yaml up -d
 
-      - name: Tell the fire wall to let me in
-        run: sudo ufw allow from 127.0.0.1 to any port 80
+      #- name: Tell the fire wall to let me in
+      #  run: sudo ufw allow from 127.0.0.1 to any port 80
 
       #- name: Deny incoming
        # run: sudo ufw default deny incoming
@@ -37,7 +37,10 @@ jobs:
        # run: java -jar selenium-server-4.8.1.jar standalone -d
 
       - name: Running the Python file
-        run: python3 Selenium_Website_Test.py
+      run: |
+        netstat -planet | grep 4444
+        netstat -planet
+        python3  Selenium_Website_Test.py
 
       - name: KILL THE GRID!!!!
         run: docker-compose -f docker-compose.yaml down
