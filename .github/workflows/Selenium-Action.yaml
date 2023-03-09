@@ -28,10 +28,10 @@ jobs:
        # run: ufw allow from 127.0.0.1 to any port 4444
 
       - name: Deny incoming
-        run: ufw default deny incoming
+        run: sudo ufw default deny incoming
 
       - name: Allow outgoing
-        run: ufw default allow outgoing
+        run: sudo ufw default allow outgoing
 
       #- name: RUN THE GRID!!!
        # run: java -jar selenium-server-4.8.1.jar standalone -d
