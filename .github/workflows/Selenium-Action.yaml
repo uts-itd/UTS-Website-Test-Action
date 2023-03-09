@@ -24,8 +24,14 @@ jobs:
       - name: FIRE UP THE GRID CANNON!!!
         run: docker-compose -f docker-compose.yaml up -d
 
-      - name: Tell the fire wall to let me in
-        run: ufw allow from 127.0.0.1 to any port 4444
+      #- name: Tell the fire wall to let me in
+       # run: ufw allow from 127.0.0.1 to any port 4444
+
+      - name: Deny incoming
+        run: ufw default deny incoming
+
+      - name: Allow outgoing
+        run: ufw default allow outgoing
 
       #- name: RUN THE GRID!!!
        # run: java -jar selenium-server-4.8.1.jar standalone -d
