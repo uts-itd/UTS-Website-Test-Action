@@ -7,7 +7,6 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.edge.options import Options
 #from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import os
 #from selenium import webdriver
 #import subprocess
