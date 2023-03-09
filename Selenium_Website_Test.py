@@ -73,3 +73,5 @@ def webtest(driver):
 webtest(driverFirefox)
 webtest(driverChrome)
 webtest(driverEdge)
+
+# R.I.P Joe Rogan
