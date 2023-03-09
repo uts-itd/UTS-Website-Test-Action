@@ -18,11 +18,8 @@ jobs:
       - name: Install Selenium
         run: pip install selenium
 
-      - name: Install Docker
-        run: apt install docker
-
-      - name: Install docker compose
-        run: apt install docker-compose
+      - name: Tell the fire wall to let me in
+        run: ufw allow from localhost to any port 4444
 
       #- name: Intall Linux subsystem #this is because this build is running on windows
         #run: wsl --install
