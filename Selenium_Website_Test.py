@@ -22,7 +22,7 @@ fireFox_options.add_argument("--headless") # watch your head!
 chrome_options.add_argument("--headless")
 edge_options.add_argument("--headless")
 
-chrome_options.add_argument("--disable-dev-shm-usage")
+#chrome_options.add_argument("--disable-dev-shm-usage")
 
 # manipulating the dimensions of space..... but not time
 fireFox_options.add_argument("--width=1920") # Firefox is not chromium!!! 
