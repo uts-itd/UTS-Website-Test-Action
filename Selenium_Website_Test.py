@@ -8,7 +8,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.edge.options import Options
 #from selenium.webdriver.chrome.service import Service
 import os
-#from selenium import webdriver
+from selenium import webdriver
 #import subprocess
 
 # define ze options
@@ -69,6 +69,7 @@ def webtest(driver):
         driver.find_element(By.CSS_SELECTOR, ".search-form").submit()
         driver.implicitly_wait(10) # If it takes 10 seconds to hit the ground, how high is the building?
         driver.find_element(By.XPATH, "//a[contains(text(),'Tools for threading WIL into your whole of course design: Careers Canvas modules and the TRACK-Learner tool | 12 October')]").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img").click() 
         driver.quit() #KILL IT! (WITH FIRE)
 webtest(driverFirefox)
 webtest(driverChrome)
