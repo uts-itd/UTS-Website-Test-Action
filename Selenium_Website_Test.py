@@ -51,7 +51,7 @@ options=edge_options
 driverFirefox.get('https://lx.uts.edu.au/') #Fire up the Fox Cannon!
 driverChrome.get('https://lx.uts.edu.au/')  #Fire up the Chrome Cannon!
 driverEdge.get('https://lx.uts.edu.au/')    #Fire up the Edge Cannon!
-
+ 
 # Run deez tests!
 def webtest(driver):
         driver.find_element(By.XPATH, "//a[contains(text(),'LX Resources')]").click()
@@ -69,7 +69,29 @@ def webtest(driver):
         driver.find_element(By.CSS_SELECTOR, ".search-form").submit()
         driver.implicitly_wait(10) # If it takes 10 seconds to hit the ground, how high is the building?
         driver.find_element(By.XPATH, "//a[contains(text(),'Tools for threading WIL into your whole of course design: Careers Canvas modules and the TRACK-Learner tool | 12 October')]").click()
-        driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img").click() 
+        driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div[2]/section[4]/div/div/div/div/div[2]/div[2]/a").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/header/div[2]/div/nav/div/div/ul/li[3]/a").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/main/section[1]/div/div/div[2]/div[2]/a").click() 
+        driver.find_element(By.XPATH, "/html/body/div[1]/header/div[2]/div/nav/div/div/ul/li[3]/a").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/main/section[4]/div/div[2]/div[11]/ul/li[2]/a").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/main/section[4]/div/div[2]/div[11]/ul/li[7]/a").click()
+        #driver.find_element(By.XPATH, "/html/body/div[1]/main/section[4]/div/div[2]/div[11]/ul/li[8]/a").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/header/div[2]/div/nav/div/div/ul/li[4]/a").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/main/section[2]/div/div/div/div/div[2]/div[2]/div[2]/div/div[2]/div[2]/a").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/main/section[3]/div/div/div[1]/div/a").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/header/div[2]/div/nav/div/div/ul/li[4]/a").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/header/div[2]/div/nav/div/div/ul/li[5]/a").click()
+        
+        driver.find_element(By.XPATH, "/html/body/div[1]/main/section[2]/div/div/div/div[2]/form/div[1]/input").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/main/section[2]/div/div/div/div[2]/form/div[1]/input").send_keys('Joe')
+        driver.find_element(By.XPATH, "/html/body/div[1]/main/section[2]/div/div/div/div[2]/form/div[2]/input").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/main/section[2]/div/div/div/div[2]/form/div[2]/input").send_keys('Trololo')
+        driver.find_element(By.XPATH, "/html/body/div[1]/main/section[2]/div/div/div/div[2]/form/div[3]/input").click
+        driver.find_element(By.XPATH, "/html/body/div[1]/main/section[2]/div/div/div/div[2]/form/div[3]/input").send_keys('joeytrollol@uts.edu.au')
+        driver.find_element(By.XPATH, "/html/body/div[1]/main/section[2]/div/div/div/div[2]/form/div[5]/input").click()
+
         driver.quit() #KILL IT! (WITH FIRE)
 webtest(driverFirefox)
 webtest(driverChrome)
