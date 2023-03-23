@@ -18,17 +18,17 @@ edge_options = webdriver.EdgeOptions()
 options = Options()
 
 # see no evil
-fireFox_options.add_argument("--headless") # watch your head!
-chrome_options.add_argument("--headless")
-edge_options.add_argument("--headless")
+#fireFox_options.add_argument("--headless") # watch your head!
+#chrome_options.add_argument("--headless")
+#edge_options.add_argument("--headless")
 
 #chrome_options.add_argument("--disable-dev-shm-usage")
 
 # manipulating the dimensions of space..... but not time
-fireFox_options.add_argument("--width=1920") # Firefox is not chromium!!! 
-fireFox_options.add_argument("--height=1080") # Firefox is not chromium!!! 
-chrome_options.add_argument("--window-size=1920,1080")
-edge_options.add_argument("--window-size=1920,1080")
+fireFox_options.add_argument("--kiosk") # Firefox is not chromium!!! 
+#fireFox_options.add_argument("--height=1080") # Firefox is not chromium!!! 
+chrome_options.add_argument("--kiosk")
+edge_options.add_argument("--kiosk")
 
 # Point me in the right direction baby!
 driverFirefox = webdriver.Remote( 
@@ -73,24 +73,25 @@ def webtest(driver):
         #End Nav buttons
 
         #Search bar 
-        driver.find_element(By.ID, "s").click()
-        driver.find_element(By.ID, "s").send_keys('careers')
+        driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[2]/a").click()
+        driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[2]/div/div/form/input").send_keys('careers')
         driver.find_element(By.CSS_SELECTOR, ".search-form").submit()
-        driver.implicitly_wait(10) # If it takes 10 seconds to hit the ground, how high is the building?
-        driver.find_element(By.XPATH, "//a[contains(text(),'Tools for threading WIL into your whole of course design: Careers Canvas modules and the TRACK-Learner tool | 12 October')]").click()
+        driver.implicitly_wait(20) # If it takes 10 seconds to hit the ground, how high is the building?
+        driver.find_element(By.XPATH, "/html/body/div[1]/main/section/div/div[2]/div[1]/div[2]/div/h3/a").click()
         driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img").click()
         #End of search bar
 
         #Slick Arrows top
-        driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div/section[1]/div/div/div/div/div[2]/div[2]/a").click()
-        driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img").click()
-        driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div[2]/section[1]/div/div/button[2]").click()
-        driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div/section[1]/div/div/div/div/div[3]/div[2]/a").click()
-        driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img").click()
-        driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div[2]/section[1]/div/div/button[2]").click()
-        driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div[2]/section[1]/div/div/button[2]").click()
-        driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div/section[1]/div/div/div/div/div[4]/div[2]/a").click()
-        driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img").click()
+        driver.find_element(By.XPATH,"//main[@id='main']/div/div[2]/section/div/div/div/div/div[2]/div[2]/a").click()
+        driver.find_element(By.XPATH,"//img[@alt='UTS-header']").click()
+        driver.find_element(By.XPATH,"//main[@id='main']/div/div[2]/section/div/div/button[2]").click()
+        driver.find_element(By.XPATH,"//main[@id='main']/div/div[2]/section/div/div/div/div/div[3]/div[2]/a").click()
+        driver.find_element(By.XPATH,"//img[@alt='UTS-header']").click()
+        driver.find_element(By.XPATH,"//main[@id='main']/div/div[2]/section/div/div/button[2]").click()
+        driver.find_element(By.XPATH,"//main[@id='main']/div/div[2]/section/div/div/button[2]").click()
+        #driver.find_element(By.XPATH,"//main[@id='main']/div/div[2]/section/div/div/div/div/div[4]/div[2]/a").click() 
+        #driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[4]/div[2]/a").click()
+        driver.find_element(By.XPATH,"//img[@alt='UTS-header']").click()
         #End of Slick Arrows top
 
         #Slick arrows bot
@@ -100,6 +101,7 @@ def webtest(driver):
         driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div[2]/section[4]/div/div/div/div/div[3]/div[2]/a").click()
         driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img").click()
         driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div[2]/section[4]/div/div/button[2]").click()
+        driver.implicitly_wait(3)
         driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div[2]/section[4]/div/div/button[2]").click()
         driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div/section[4]/div/div/div/div/div[4]/div[2]/a").click()
         driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img").click()
