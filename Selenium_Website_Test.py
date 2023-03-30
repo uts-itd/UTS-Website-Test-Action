@@ -129,10 +129,11 @@ def webtest(driver):
         finally:
                 driver.quit() #KILL IT! (WITH FIRE)
                 print(driver.current_url)
-                
+
 webtest(driverFirefox)
 webtest(driverChrome)
 webtest(driverEdge)
 
 # R.I.P Joe Rogan
 # R.I.P Filthy Frank 
+# Do you pick your feet in Poughkeepsie?
