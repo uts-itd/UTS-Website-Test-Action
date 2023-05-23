@@ -76,16 +76,16 @@ def webtest(driver):
                 #End of search bar
 
                 #Slick Arrows top
-                driver.find_element(By.XPATH,"//main[@id='main']/div/div[2]/section/div/div/div/div/div[2]/div[2]/a").click()
-                driver.find_element(By.XPATH,"//img[@alt='UTS-header']").click()
-                driver.find_element(By.XPATH,"//main[@id='main']/div/div[2]/section/div/div/button[2]").click()
-                driver.find_element(By.XPATH,"//main[@id='main']/div/div[2]/section/div/div/div/div/div[3]/div[2]/a").click()
-                driver.find_element(By.XPATH,"//img[@alt='UTS-header']").click()
-                driver.find_element(By.XPATH,"//main[@id='main']/div/div[2]/section/div/div/button[2]").click()
-                driver.find_element(By.XPATH,"//main[@id='main']/div/div[2]/section/div/div/button[2]").click()
-                #driver.find_element(By.XPATH,"//main[@id='main']/div/div[2]/section/div/div/div/div/div[4]/div[2]/a").click() 
-                #driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[4]/div[2]/a").click()
-                driver.find_element(By.XPATH,"//img[@alt='UTS-header']").click()
+                driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/button[1]").click()
+                driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div/section[1]/div/div/button[2]").click()
+                driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div/section[1]/div/div/div/div/div[2]/div[2]/a").click()
+                driver.back()
+                driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div/section[1]/div/div/button[2]").click()
+                driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[3]/div[2]/a").click()
+                driver.back()
+                
+                driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/button[1]").click()
+                driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[4]/div[2]/a").click()
                 #End of Slick Arrows top
 
                 #Slick arrows bot
