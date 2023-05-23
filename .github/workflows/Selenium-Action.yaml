@@ -4,12 +4,15 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checking out repo
         uses: actions/checkout@v3
+
       - name: Setting up Python
         uses: actions/setup-python@v4
         with:
@@ -28,7 +31,7 @@ jobs:
         run: ./wait-for-grid.sh
       
       - name: Running the Python file
-        run: python3  Selenium_Website_Test.py
+        run: python3 selenium_website_test.py
 
       - name: KILL THE GRID!!!!
         run: docker-compose -f docker-compose.yaml down

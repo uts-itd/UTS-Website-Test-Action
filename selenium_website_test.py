@@ -3,56 +3,45 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.firefox.options import Options
 #from selenium.webdriver.firefox.service import Service
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.edge.options import Options
 #from selenium.webdriver.chrome.service import Service
-import os
-from selenium import webdriver
 #import subprocess
 
 # define ze options
-fireFox_options = webdriver.FirefoxOptions()
+firefox_options = webdriver.FirefoxOptions()
 chrome_options = webdriver.ChromeOptions()
 edge_options = webdriver.EdgeOptions()
-options = Options()
 
 # see no evil
-#fireFox_options.add_argument("--headless") # watch your head!
+#firefox_options.add_argument("--headless") # watch your head!
 #chrome_options.add_argument("--headless")
 #edge_options.add_argument("--headless")
 
 #chrome_options.add_argument("--disable-dev-shm-usage")
+def set_options(driver_options):
+        # manipulating the dimensions of space..... but not time
+        driver_options.add_argument("--kiosk") # Firefox is not chromium!!! 
 
-# manipulating the dimensions of space..... but not time
-fireFox_options.add_argument("--kiosk") # Firefox is not chromium!!! 
-#fireFox_options.add_argument("--height=1080") # Firefox is not chromium!!! 
-chrome_options.add_argument("--kiosk")
-edge_options.add_argument("--kiosk")
+set_options(firefox_options)
+set_options(chrome_options)
+set_options(edge_options)
 
+def setup_driver(driver_options):
 # Point me in the right direction baby!
-driverFirefox = webdriver.Remote( 
-command_executor="http://localhost:4444",
-options=fireFox_options
-)
+        driver = webdriver.Remote( 
+        command_executor="http://localhost:4444",
+        options=driver_options
+        )
+        driver.get('https://lx.uts.edu.au/')
+        return driver
 
+driver_firefox = setup_driver(firefox_options)
 # Point me in the right direction baby The sequel!
-driverChrome = webdriver.Remote( 
-command_executor="http://localhost:4444",
-options=chrome_options
-)
+driver_chrome = setup_driver(chrome_options)
 
 # Point me in the right direction baby The Threequel! 
-driverEdge = webdriver.Remote( 
-command_executor="http://localhost:4444",
-options=edge_options
-)
+driver_edge = setup_driver(edge_options)
 
-driverFirefox.get('https://lx.uts.edu.au/') #Fire up the Fox Cannon!
-driverChrome.get('https://lx.uts.edu.au/')  #Fire up the Chrome Cannon!
-driverEdge.get('https://lx.uts.edu.au/')    #Fire up the Edge Cannon!
- 
 # Run deez tests!
 def webtest(driver):
 
@@ -130,7 +119,7 @@ def webtest(driver):
                 driver.quit() #KILL IT! (WITH FIRE)
                 print(driver.current_url)
 
-webtest(driverFirefox)
-webtest(driverChrome)
-webtest(driverEdge)
+webtest(driver_firefox)
+webtest(driver_chrome)
+webtest(driver_edge)
 
