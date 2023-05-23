@@ -74,7 +74,8 @@ def webtest(driver):
                 driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[2]/div/div/form/input").send_keys('careers')
                 driver.find_element(By.CSS_SELECTOR, ".search-form").submit()
                 driver.implicitly_wait(20) # If it takes 10 seconds to hit the ground, how high is the building?
-                driver.find_element(By.XPATH, "/html/body/div[1]/main/section/div/div[2]/div[1]/div[2]/div/h3/a").click()
+                WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, "/html/body/div[1]/main/section/div/div[2]/div[1]/div[2]/div/h3/a"))).click()
                 driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img").click()
                 #End of search bar
 
@@ -89,8 +90,7 @@ def webtest(driver):
                 right_arrow
                 #Use explicit wait to find the "five takeaways article because it is not able to be found in one of the attempts"
                 five_takeaways = WebDriverWait(driver, 120).until(
-                EC.presence_of_element_located((By.XPATH, "/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[3]/div[2]/a")))
-                driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[3]/div[2]/a")
+                EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[3]/div[2]/a")))
                 driver.execute_script("arguments[0].click();", five_takeaways)
                 driver.back()
                 
@@ -133,4 +133,3 @@ def webtest(driver):
 webtest(driver_firefox)
 webtest(driver_chrome)
 webtest(driver_edge)
-
