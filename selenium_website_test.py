@@ -3,6 +3,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.support import expected_conditions as EC
 #from selenium.webdriver.firefox.service import Service
 #from selenium.webdriver.chrome.service import Service
 #import subprocess
@@ -21,7 +22,7 @@ edge_options = webdriver.EdgeOptions()
 def set_options(driver_options):
         # manipulating the dimensions of space..... but not time
         driver_options.add_argument("--kiosk") # Firefox is not chromium!!! 
-        driver_options("--start-maximized")
+        #driver_options("--start-maximized")
 
 
 set_options(firefox_options)
@@ -85,7 +86,10 @@ def webtest(driver):
                 driver.back()
 
                 right_arrow
-                five_takeaways = driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[3]/div[2]/a")
+                #Use explicit wait to find the "five takeaways article because it is not able to be found in one of the attempts"
+                five_takeaways = WebDriverWait(driver, 20).until(
+                EC.presence_of_element_located((By.XPATH, "/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[3]/div[2]/a")))
+                driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[3]/div[2]/a")
                 driver.execute_script("arguments[0].click();", five_takeaways)
                 driver.back()
                 
