@@ -117,7 +117,6 @@ def webtest(driver):
                 #driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img").click()
         finally:
                 driver.quit() #KILL IT! (WITH FIRE)
-                print(driver.current_url)
 
 webtest(driver_firefox)
 webtest(driver_chrome)
