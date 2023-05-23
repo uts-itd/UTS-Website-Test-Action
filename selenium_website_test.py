@@ -8,7 +8,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 #import subprocess
 
 # define ze options
-#firefox_options = webdriver.FirefoxOptions()
+firefox_options = webdriver.FirefoxOptions()
 chrome_options = webdriver.ChromeOptions()
 edge_options = webdriver.EdgeOptions()
 
@@ -21,9 +21,9 @@ edge_options = webdriver.EdgeOptions()
 def set_options(driver_options):
         # manipulating the dimensions of space..... but not time
         driver_options.add_argument("--kiosk") # Firefox is not chromium!!! 
-        driver_options.add_argument("--start-maximized")
 
-#set_options(firefox_options)
+
+set_options(firefox_options)
 set_options(chrome_options)
 set_options(edge_options)
 
@@ -36,7 +36,7 @@ def setup_driver(driver_options):
         driver.get('https://lx.uts.edu.au/')
         return driver
 
-#driver_firefox = setup_driver(firefox_options)
+driver_firefox = setup_driver(firefox_options)
 # Point me in the right direction baby The sequel!
 driver_chrome = setup_driver(chrome_options)
 
@@ -124,7 +124,7 @@ def webtest(driver):
         finally:
                 driver.quit() #KILL IT! (WITH FIRE)
 
-#webtest(driver_firefox)
+webtest(driver_firefox)
 webtest(driver_chrome)
 webtest(driver_edge)
 
