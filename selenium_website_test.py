@@ -36,7 +36,7 @@ def setup_driver(driver_options):
         options=driver_options
         )
         driver.get('https://lx.uts.edu.au/')
-        driver.manage().window().maximize()
+        driver.maximize_window()
         return driver
 
 driver_firefox = setup_driver(firefox_options)
