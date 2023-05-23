@@ -76,16 +76,21 @@ def webtest(driver):
                 #End of search bar
 
                 #Slick Arrows top
-                driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/button[1]").click()
-                driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div/section[1]/div/div/button[2]").click()
-                driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div/section[1]/div/div/div/div/div[2]/div[2]/a").click()
+                left_arrow = driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/button[1]").click()
+                right_arrow = driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div/section[1]/div/div/button[2]").click()
+
+                tips_for_chatgpt = driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div/section[1]/div/div/div/div/div[2]/div[2]/a")
+                driver.execute_script("arguments[0].click();", tips_for_chatgpt)
                 driver.back()
-                driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div/section[1]/div/div/button[2]").click()
-                driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[3]/div[2]/a").click()
+
+                right_arrow
+                five_takeaways = driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[3]/div[2]/a")
+                driver.execute_script("arguments[0].click();", five_takeaways)
                 driver.back()
                 
-                driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/button[1]").click()
-                driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[4]/div[2]/a").click()
+                left_arrow
+                save_the_date = driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[4]/div[2]/a")
+                driver.execute_script("arguments[0].click();", save_the_date)
                 #End of Slick Arrows top
 
                 #Slick arrows bot
