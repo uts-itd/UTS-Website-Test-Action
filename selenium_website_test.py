@@ -21,7 +21,7 @@ edge_options = webdriver.EdgeOptions()
 #chrome_options.add_argument("--disable-dev-shm-usage")
 def set_options(driver_options):
         # manipulating the dimensions of space..... but not time
-        driver_options.add_argument("--kiosk") # Firefox is not chromium!!! 
+        #driver_options.add_argument("--kiosk") # Firefox is not chromium!!! 
         #driver_options("--start-maximized") It makes everything work on Chrome and Edge
         driver_options.add_argument("--window-size=1920,1080")
         driver_options.add_argument("--width=1920")
@@ -92,7 +92,7 @@ def webtest(driver):
 
                 right_arrow
                 #Use explicit wait to find the "five takeaways article because it is not able to be found in one of the attempts"
-                five_takeaways = WebDriverWait(driver, 120).until(
+                five_takeaways = WebDriverWait(driver, 10).until(
                 EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[3]/div[2]/a")))
                 driver.execute_script("arguments[0].click();", five_takeaways)
                 driver.back()
