@@ -19,15 +19,18 @@ edge_options = webdriver.EdgeOptions()
 #edge_options.add_argument("--headless")
 
 #chrome_options.add_argument("--disable-dev-shm-usage")
-#def set_options(driver_options):
+def set_options(driver_options):
         # manipulating the dimensions of space..... but not time
-        #driver_options.add_argument("--kiosk") # Firefox is not chromium!!! 
+        driver_options.add_argument("--kiosk") # Firefox is not chromium!!! 
         #driver_options("--start-maximized") It makes everything work on Chrome and Edge
+        driver_options.add_argument("--window-size=1920,1080")
+        driver_options.add_argument("--width=1920")
+        driver_options.add_argument("--height=1080")
 
 
-# set_options(firefox_options)
-# set_options(chrome_options)
-# set_options(edge_options)
+set_options(firefox_options)
+set_options(chrome_options)
+set_options(edge_options)
 
 def setup_driver(driver_options):
 # Point me in the right direction baby!
