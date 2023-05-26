@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  test_setup:
     runs-on: ubuntu-latest
     steps:
       - name: Checking out repo
@@ -29,10 +29,35 @@ jobs:
 
       - name: Wait for grid
         run: ./wait-for-grid.sh
-      
-      - name: Running the Python file
-        run: python3 selenium_website_test.py
 
+  firefox_tests:
+    needs: test_setup
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run the Firefox Tests
+        run: python3 browser_test/firefox_tests.py
+
+  chrome_tests:
+    needs: test_setup
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run the Chrome Tests
+        run: python3 browser_test/chrome_tests.py
+
+  edge_tests:
+    needs: test_setup
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run the Edge Tests
+        run: python3 browser_test/edge_tests.py
+
+  finish_setup:
+    needs: [firefox_tests, chrome_tests, edge_tests]
+    runs-on: ubuntu-latest
+    steps:
       - name: KILL THE GRID!!!!
         run: docker-compose -f docker-compose.yaml down
 
