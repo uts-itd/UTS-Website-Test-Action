@@ -88,6 +88,7 @@ def webtest(driver):
                 driver.execute_script("arguments[0].click();", tips_for_chatgpt)
                 driver.back()
 
+                right_arrow = driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div/section[1]/div/div/button[2]")
                 driver.execute_script("arguments[0].click();", right_arrow)
                 #Use explicit wait to find the "five takeaways article because it is not able to be found in one of the attempts"
                 five_takeaways = WebDriverWait(driver, 10).until(
