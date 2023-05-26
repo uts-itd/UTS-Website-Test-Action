@@ -21,7 +21,7 @@ edge_options = webdriver.EdgeOptions()
 #chrome_options.add_argument("--disable-dev-shm-usage")
 def set_options(driver_options):
         # manipulating the dimensions of space..... but not time
-        driver_options.add_argument("--kiosk") # Firefox is not chromium!!! 
+        #driver_options.add_argument("--kiosk") # Firefox is not chromium!!! 
         driver_options.add_argument("--start-maximized") #It makes everything work on Chrome and Edge
 
 
