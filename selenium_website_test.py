@@ -22,10 +22,7 @@ edge_options = webdriver.EdgeOptions()
 def set_options(driver_options):
         # manipulating the dimensions of space..... but not time
         #driver_options.add_argument("--kiosk") # Firefox is not chromium!!! 
-        #driver_options("--start-maximized") It makes everything work on Chrome and Edge
-        driver_options.add_argument("--window-size=1920,1080")
-        driver_options.add_argument("--width=1920")
-        driver_options.add_argument("--height=1080")
+        driver_options("--start-maximized") #It makes everything work on Chrome and Edge
 
 
 set_options(firefox_options)
