@@ -21,7 +21,7 @@ edge_options = webdriver.EdgeOptions()
 #chrome_options.add_argument("--disable-dev-shm-usage")
 def set_options(driver_options):
         # manipulating the dimensions of space..... but not time
-        #driver_options.add_argument("--kiosk") # Firefox is not chromium!!! 
+        driver_options.add_argument("--kiosk") # Firefox is not chromium!!! 
         driver_options.add_argument("--start-maximized") #It makes everything work on Chrome and Edge
 
 
@@ -81,16 +81,15 @@ def webtest(driver):
 
                 #Slick Arrows top
                 left_arrow = driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/button[1]").click()
-                right_arrow = driver.find_element(By.XPATH,'//*[@id="main"]/div/div[2]/section[1]/div/div/button[2]')
-                driver.execute_script("arguments[0].click();", right_arrow)
+                right_arrow = driver.find_element(By.XPATH,'/html/body/div[1]/main/div/div[2]/section[1]/div/div/button[2]').click()
+               #driver.execute_script("arguments[0].click();", right_arrow)
 
                 tips_for_chatgpt = driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div/section[1]/div/div/div/div/div[2]/div[2]/a")
                 driver.execute_script("arguments[0].click();", tips_for_chatgpt)
-                driver.back()
+                driver.execute_script("window.history.go(-1)")
                 print(driver.current_url)
 
-                right_arrow = driver.find_element(By.XPATH,'//*[@id="main"]/div/div[2]/section[1]/div/div/button[2]')
-                driver.execute_script("arguments[0].click();", right_arrow)
+                right_arrow
                 #Use explicit wait to find the "five takeaways article because it is not able to be found in one of the attempts"
                 five_takeaways = WebDriverWait(driver, 10).until(
                 EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[3]/div[2]/a")))
