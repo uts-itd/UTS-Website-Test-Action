@@ -46,6 +46,9 @@ driver_chrome = setup_driver(chrome_options)
 # Point me in the right direction baby The Threequel! 
 driver_edge = setup_driver(edge_options)
 
+def click_right_arrow(driver):
+        right_arrow = driver.find_element(By.XPATH,'/html/body/div[1]/main/div/div[2]/section[1]/div/div/button[2]')
+        driver.execute_script("arguments[0].click();", right_arrow)
 # Run deez tests!
 def webtest(driver):
 
@@ -76,29 +79,27 @@ def webtest(driver):
                 driver.implicitly_wait(20) # If it takes 10 seconds to hit the ground, how high is the building?
                 WebDriverWait(driver, 10).until(
                 EC.presence_of_element_located((By.XPATH, "/html/body/div[1]/main/section/div/div[2]/div[1]/div[2]/div/h3/a"))).click()
-                driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img").click()
-                driver.execute_script("window.history.go(-1)")
+                home_button = driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img").click()
+                driver.execute_script("arguments[0].click();", home_button)
                 #End of search bar
 
-                def click_right_arrow():
-                        right_arrow = driver.find_element(By.XPATH,'/html/body/div[1]/main/div/div[2]/section[1]/div/div/button[2]')
-                        driver.execute_script("arguments[0].click();", right_arrow)
-
-
                 #Slick Arrows top
-                left_arrow = driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/button[1]").click()
-                click_right_arrow()
+                left_arrow = driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/button[1]")
+                driver.execute_script("arguments[0].click();", left_arrow)
+                click_right_arrow(driver)
 
                 tips_for_chatgpt = driver.find_element(By.XPATH,'//*[@id="main"]/div/div[2]/section[1]/div/div/div/div/div[2]/div[2]/a')
                 driver.execute_script("arguments[0].click();", tips_for_chatgpt)
-                driver.find_element(By.XPATH, '/html/body/div[1]/header/div[1]/div/div[1]/a/img').click()
+                home_button = driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img").click()
+                driver.execute_script("arguments[0].click();", home_button)
 
                 #click_right_arrow()
                 #Use explicit wait to find the "five takeaways article because it is not able to be found in one of the attempts"
                 five_takeaways = WebDriverWait(driver, 10).until(
                 EC.element_to_be_clickable((By.XPATH, '//*[@id="main"]/div/div[2]/section[1]/div/div/div/div/div[3]/div[2]/a')))
                 driver.execute_script("arguments[0].click();", five_takeaways)
-                driver.execute_script("window.history.go(-1)")
+                home_button = driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img").click()
+                driver.execute_script("arguments[0].click();", home_button)
                 
                 #left_arrow
                 #save_the_date = driver.find_element(By.XPATH,'//*[@id="main"]/div/div[2]/section[1]/div/div/div/div/div[4]/div[2]/a')
