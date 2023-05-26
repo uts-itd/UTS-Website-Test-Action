@@ -81,7 +81,7 @@ def webtest(driver):
 
                 #Slick Arrows top
                 left_arrow = driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/button[1]").click()
-                right_arrow = driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div/section[1]/div/div/button[2]").click()
+                right_arrow = driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div/section[1]/div/div/button[2]")
                 driver.execute_script("arguments[0].click();", right_arrow)
 
                 tips_for_chatgpt = driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div/section[1]/div/div/div/div/div[2]/div[2]/a")
