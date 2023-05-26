@@ -90,19 +90,19 @@ def webtest(driver):
 
                 tips_for_chatgpt = driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div/section[1]/div/div/div/div/div[2]/div[2]/a")
                 driver.execute_script("arguments[0].click();", tips_for_chatgpt)
-                driver.execute_script("window.history.go(-1)")
                 print(driver.current_url)
+                driver.execute_script("window.history.go(-1)")
 
                 click_right_arrow()
                 #Use explicit wait to find the "five takeaways article because it is not able to be found in one of the attempts"
-                five_takeaways = WebDriverWait(driver, 10).until(
-                EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[3]/div[2]/a")))
-                driver.execute_script("arguments[0].click();", five_takeaways)
-                driver.back()
-                
-                left_arrow
-                save_the_date = driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[4]/div[2]/a")
+                save_the_date = WebDriverWait(driver, 10).until(
+                EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[4]/div[2]/a")))
                 driver.execute_script("arguments[0].click();", save_the_date)
+                driver.execute_script("window.history.go(-1)")
+                
+                #left_arrow
+                #save_the_date = driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[4]/div[2]/a")
+                #driver.execute_script("arguments[0].click();", save_the_date)
                 #End of Slick Arrows top
 
                 #Slick arrows bot
