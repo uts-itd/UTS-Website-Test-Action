@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  firefox_tests:
+  tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checking out repo
@@ -31,81 +31,13 @@ jobs:
         run: ./wait-for-grid.sh
       
       - name: Run the Firefox Tests
-        run: python3 browser_test/firefox_tests.py
+        run: python3 selenium_website_test.py
       
       - name: KILL THE GRID!!!!
         run: docker-compose -f docker-compose.yaml down
 
-      - name: TEAM ROCKET!!!!
-        run: ./TeamRocket.sh
-
-      - name: The Legend Never Dies
-        run: ./TheLegendNeverDies.sh
-  
-  chrome_tests:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checking out repo
-        uses: actions/checkout@v3
-      
-      - name: Setting up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11.2'
-      
-      - name: Install Selenium
-        run: pip install selenium
-      
-      - name: FIRE UP THE GRID CANNON!!!
-        run: docker-compose -f docker-compose.yaml up -d
-      
-      - name: Wait for grid
-        run: ./wait-for-grid.sh
-          
-      - name: Run the Chrome Tests
-        run: python3 browser_test/chrome_tests.py
-        
-      - name: KILL THE GRID!!!!
-        run: docker-compose -f docker-compose.yaml down
-  
-      - name: TEAM ROCKET!!!!
-        run: ./TeamRocket.sh
-  
-      - name: The Legend Never Dies
-        run: ./TheLegendNeverDies.sh
-  
-  edge_tests:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checking out repo
-        uses: actions/checkout@v3
-            
-      - name: Setting up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11.2'
-            
-      - name: Install Selenium
-        run: pip install selenium
-            
-      - name: FIRE UP THE GRID CANNON!!!
-        run: docker-compose -f docker-compose.yaml up -d
-            
-      - name: Wait for grid
-        run: ./wait-for-grid.sh
-                
-      - name: Run the Edge Tests
-        run: python3 browser_test/edge_tests.py
-              
-      - name: KILL THE GRID!!!!
-        run: docker-compose -f docker-compose.yaml down
-        
-      - name: TEAM ROCKET!!!!
-        run: ./TeamRocket.sh
-        
-      - name: The Legend Never Dies
-        run: ./TheLegendNeverDies.sh
-    
-
-
+      - name: TEAM ROCKET!!!! The Legend Never Dies
+        run: |
+          ./TeamRocket.sh
+          ./TheLegendNeverDies.sh
      
