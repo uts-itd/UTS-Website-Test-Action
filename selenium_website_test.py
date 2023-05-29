@@ -40,7 +40,7 @@ def setup_driver(driver_options):
 
 firefox_driver = setup_driver(firefox_options)
 chrome_driver = setup_driver(chrome_options)
-edge_driver = setup_driver(edge_driver)
+edge_driver = setup_driver(edge_options)
 
 def click_right_arrow(driver):
         right_arrow = driver.find_element(By.XPATH,'/html/body/div[1]/main/div/div[2]/section[1]/div/div/button[2]')
