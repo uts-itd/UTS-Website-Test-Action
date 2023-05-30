@@ -45,6 +45,11 @@ edge_driver = setup_driver(edge_options)
 def click_right_arrow(driver):
         right_arrow = driver.find_element(By.XPATH,'/html/body/div[1]/main/div/div[2]/section[1]/div/div/button[2]')
         driver.execute_script("arguments[0].click();", right_arrow)
+
+def click_left_arrow(driver):
+        left_arrow = driver.find_element(By.XPATH,'/html/body/div[1]/main/div/div[2]/section[1]/div/div/button[1]')
+        driver.execute_script("arguments[0].click();", left_arrow)
+
 # Run deez tests!
 def webtest(driver):
 
@@ -80,27 +85,28 @@ def webtest(driver):
                 #End of search bar
 
                 #Slick Arrows top
-                left_arrow = driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/button[1]")
-                driver.execute_script("arguments[0].click();", left_arrow)
+                click_left_arrow(driver)
                 click_right_arrow(driver)
-
                 article = driver.find_element(By.XPATH,'/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[2]/div[2]/a')
                 driver.execute_script("arguments[0].click();", article)
                 home_button = driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img")
                 driver.execute_script("arguments[0].click();", home_button)
 
                 click_right_arrow(driver)
-                left_arrow = driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/button[1]")
-                driver.execute_script("arguments[0].click();", left_arrow)
-                #Use explicit wait to find the article  to the left because it is not able to be found in one of the attempts"
+                click_left_arrow(driver)
+                # find the article to the left
                 article_left = driver.find_element(By.XPATH, '/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[4]/div[2]/a')
                 driver.execute_script("arguments[0].click();", article_left)
                 home_button = driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img")
                 driver.execute_script("arguments[0].click();", home_button)
                 
-                #left_arrow
-                #save_the_date = driver.find_element(By.XPATH,'//*[@id="main"]/div/div[2]/section[1]/div/div/div/div/div[4]/div[2]/a')
-                #driver.execute_script("arguments[0].click();", save_the_date)
+                click_right_arrow(driver)
+                click_left_arrow(driver)
+                # find the article to the right
+                article_right = driver.find_element(By.XPATH,'/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[3]/div[2]/a')
+                driver.execute_script("arguments[0].click();", article_right)
+                home_button = driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img")
+                driver.execute_script("arguments[0].click();", home_button)
                 #End of Slick Arrows top
 
                 #Slick arrows bot
