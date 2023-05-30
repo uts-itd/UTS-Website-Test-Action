@@ -92,10 +92,9 @@ def webtest(driver):
                 click_right_arrow(driver)
                 left_arrow = driver.find_element(By.XPATH,"/html/body/div[1]/main/div/div[2]/section[1]/div/div/button[1]")
                 driver.execute_script("arguments[0].click();", left_arrow)
-                #Use explicit wait to find the "five takeaways article because it is not able to be found in one of the attempts"
-                article = WebDriverWait(driver, 10).until(
-                EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[2]/div[2]/a')))
-                driver.execute_script("arguments[0].click();", article)
+                #Use explicit wait to find the article  to the left because it is not able to be found in one of the attempts"
+                article_left = driver.find_element(By.XPATH, '/html/body/div[1]/main/div/div[2]/section[1]/div/div/div/div/div[4]/div[2]/a')
+                driver.execute_script("arguments[0].click();", article_left)
                 home_button = driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img")
                 driver.execute_script("arguments[0].click();", home_button)
                 
