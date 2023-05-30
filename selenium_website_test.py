@@ -75,7 +75,7 @@ def webtest(driver):
                 driver.implicitly_wait(20) # If it takes 10 seconds to hit the ground, how high is the building?
                 WebDriverWait(driver, 10).until(
                 EC.presence_of_element_located((By.XPATH, "/html/body/div[1]/main/section/div/div[2]/div[1]/div[2]/div/h3/a"))).click()
-                home_button = driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img").click()
+                home_button = driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img")
                 driver.execute_script("arguments[0].click();", home_button)
                 #End of search bar
 
@@ -86,7 +86,7 @@ def webtest(driver):
 
                 tips_for_chatgpt = driver.find_element(By.XPATH,'//*[@id="main"]/div/div[2]/section[1]/div/div/div/div/div[2]/div[2]/a')
                 driver.execute_script("arguments[0].click();", tips_for_chatgpt)
-                home_button = driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img").click()
+                home_button = driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img")
                 driver.execute_script("arguments[0].click();", home_button)
 
                 click_right_arrow(driver)
@@ -94,7 +94,7 @@ def webtest(driver):
                 five_takeaways = WebDriverWait(driver, 10).until(
                 EC.element_to_be_clickable((By.XPATH, '//*[@id="main"]/div/div[2]/section[1]/div/div/div/div/div[3]/div[2]/a')))
                 driver.execute_script("arguments[0].click();", five_takeaways)
-                home_button = driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img").click()
+                home_button = driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img")
                 driver.execute_script("arguments[0].click();", home_button)
                 
                 #left_arrow
