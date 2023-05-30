@@ -91,9 +91,9 @@ def webtest(driver):
 
                 click_right_arrow(driver)
                 #Use explicit wait to find the "five takeaways article because it is not able to be found in one of the attempts"
-                five_takeaways = WebDriverWait(driver, 10).until(
-                EC.element_to_be_clickable((By.XPATH, '//*[@id="main"]/div/div[2]/section[1]/div/div/div/div/div[3]/div[2]/a')))
-                driver.execute_script("arguments[0].click();", five_takeaways)
+                tips_for_chatgpt = WebDriverWait(driver, 10).until(
+                EC.element_to_be_clickable((By.XPATH, '//*[@id="main"]/div/div[2]/section[1]/div/div/div/div/div[2]/div[2]/a')))
+                driver.execute_script("arguments[0].click();", tips_for_chatgpt)
                 home_button = driver.find_element(By.XPATH, "/html/body/div[1]/header/div[1]/div/div[1]/a/img")
                 driver.execute_script("arguments[0].click();", home_button)
                 
