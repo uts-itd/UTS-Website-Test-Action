@@ -103,6 +103,6 @@ jobs:
     steps:
       - name: TEAM ROCKET!!!! The Legend Never Dies
         run: |
-          ./TeamRocket.sh
-          ./TheLegendNeverDies.sh
+          TeamRocket.sh
+          TheLegendNeverDies.sh
      
