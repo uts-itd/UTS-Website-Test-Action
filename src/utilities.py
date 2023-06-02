@@ -1,17 +1,9 @@
 from selenium import webdriver
-from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support import expected_conditions as EC
-#from selenium.webdriver.firefox.service import Service
-#from selenium.webdriver.chrome.service import Service
-#import subprocess
 
-# define ze options
-firefox_options = webdriver.FirefoxOptions()
-chrome_options = webdriver.ChromeOptions()
-edge_options = webdriver.EdgeOptions()
 
 # see no evil
 #firefox_options.add_argument("--headless") # watch your head!
@@ -24,10 +16,6 @@ def set_options(driver_options):
         #driver_options.add_argument("--kiosk") # Firefox is not chromium!!! 
         driver_options.add_argument("--start-maximized") #It makes everything work on Chrome and Edge
 
-set_options(firefox_options)
-set_options(chrome_options)
-set_options(edge_options)
-
 def setup_driver(driver_options):
 # Point me in the right direction baby!
         driver = webdriver.Remote( 
@@ -37,10 +25,6 @@ def setup_driver(driver_options):
         driver.get('https://lx.uts.edu.au/')
         driver.maximize_window()
         return driver
-
-firefox_driver = setup_driver(firefox_options)
-chrome_driver = setup_driver(chrome_options)
-edge_driver = setup_driver(edge_options)
 
 def click_right_arrow(driver):
         right_arrow = driver.find_element(By.XPATH,'/html/body/div[1]/main/div/div[2]/section[1]/div/div/button[2]')
@@ -140,7 +124,3 @@ def webtest(driver):
         finally:
                 print(driver.current_url)
                 driver.quit() #KILL IT! (WITH FIRE)
-
-webtest(firefox_driver)
-webtest(chrome_driver)
-webtest(edge_driver)
