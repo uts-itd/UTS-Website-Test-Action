@@ -101,8 +101,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: [firefox_tests, chrome_tests, edge_tests]
     steps:
+      - name: Checking out repo
+        uses: actions/checkout@v3
+        
       - name: TEAM ROCKET!!!! The Legend Never Dies
         run: |
-          TeamRocket.sh
-          TheLegendNeverDies.sh
+          ./TeamRocket.sh
+          ./TheLegendNeverDies.sh
      
