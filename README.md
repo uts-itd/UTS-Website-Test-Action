@@ -1,4 +1,4 @@
-# uts-chinese-website-ui-test
+# UTS-Website-Test-Action
 <div align="center">
   <img height="400" src="https://i.imgur.com/s0CDqF5.png" />
 
