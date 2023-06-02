@@ -12,5 +12,5 @@ if __name__ == "__main__":
         utilities.set_options(chrome_options)  
         #Configure the driver
         chrome_driver = utilities.setup_driver(chrome_options)
-        utilities.ui_test(chrome_driver)
+        utilities.webtest(chrome_driver)
 

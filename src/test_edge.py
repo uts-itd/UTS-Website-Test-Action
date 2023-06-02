@@ -12,5 +12,5 @@ if __name__ == "__main__":
         utilities.set_options(edge_options)  
         #Configure the driver
         edge_driver = utilities.setup_driver(edge_options)
-        utilities.ui_test(edge_driver)
+        utilities.webtest(edge_driver)
 

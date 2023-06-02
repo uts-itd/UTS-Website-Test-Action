@@ -1,3 +1,4 @@
+'''This script stores all the common functions between the 3 test files. Including setup the drivers and the tests itself'''
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
